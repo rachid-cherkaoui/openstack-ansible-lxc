@@ -32,3 +32,8 @@ git checkout master
 ```
 RUN_TEMPEST=no ./scripts/gate-check-commit.sh
 ```
+Deployment takes around an hour to complete
+
+To access Horizon, open your browser and go to the host machine's IP address. 
+Username: admin
+Password: secretes
