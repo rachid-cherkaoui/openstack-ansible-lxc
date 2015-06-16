@@ -1,6 +1,19 @@
 # openstack-ansible-lxc
 An easy deployment of OpenStack (Kilo) on LXC using Ansible based on (https://github.com/stackforge/os-ansible-deployment)
 
+The Ansible Playbook Installs:
+
+* Keystone
+* Swift
+* Glance
+* Cinder
+* Nova
+* Neutron
+* Heat
+* Horizon
+
+![Host Layout](https://raw.githubusercontent.com/stackforge/os-ansible-deployment/master/doc/source/install-guide/figures/environment-overview.png)
+
 Make sure you have at least 12GB of Memory to install
  
 [Download Ubuntu 14.04.2 Trusty Tahr](http://releases.ubuntu.com/14.04/ubuntu-14.04.2-server-amd64.iso)
