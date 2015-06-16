@@ -24,6 +24,11 @@ Make sure you have at least 12GB of Memory to install
 ```
 apt-get update && apt-get install -y git
 ```
+
+### Install Ansible
+```
+sudo apt-get install ansible -y
+```
 ### Clone the source code
 ```
 git clone https://github.com/stackforge/os-ansible-deployment /opt/os-ansible-deployment
