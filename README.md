@@ -1,5 +1,5 @@
 # openstack-ansible-lxc
-An easy deployment of OpenStack (Kilo) on LXC using Ansible
+An easy deployment of OpenStack (Kilo) on LXC using Ansible based on (https://github.com/stackforge/os-ansible-deployment)
 
 Make sure you have at least 12GB of Memory to install
  
