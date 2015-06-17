@@ -48,7 +48,7 @@ git checkout master
 
 ### Run the script from the root directory of the cloned repository
 ```
-RUN_TEMPEST=no ./scripts/gate-check-commit.sh
+RUN_TEMPEST=no ./scripts/run-aio-build.sh
 ```
 Deployment takes around an hour to complete
 
