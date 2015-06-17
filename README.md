@@ -50,7 +50,7 @@ git checkout master
 ```
 RUN_TEMPEST=no ./scripts/run-aio-build.sh
 ```
-Deployment takes around an hour to complete
+Deployment takes around 60 minutes to complete or 120 minutes if Tempest is enabled. 
 
 To access Horizon, open your browser and go to the host machine's IP address. 
 * Username: admin
