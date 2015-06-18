@@ -45,6 +45,10 @@ or
 ```
 git checkout master
 ```
+### Bootstrap AIO
+```
+./scripts/bootstrap-aio.sh
+```
 
 ### Run the script from the root directory of the cloned repository
 ```
