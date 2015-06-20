@@ -94,6 +94,12 @@ or
 ```
 git checkout master
 ```
+
+### Bootstrap Ansible
+```
+./scripts/bootstrap-ansible.sh
+```
+
 ### Bootstrap AIO
 ```
 ./scripts/bootstrap-aio.sh
