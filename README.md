@@ -115,6 +115,11 @@ To access Horizon, open your browser and go to the host machine's IP address.
 * Username: admin
 * Password: (is generated randomly - you can find it in the openrc file)
 
+##To use the CLI 
+``
+source openrc
+``
+
 ### Rebuilding the Stack
 
 If you'd like to tear down the stack and restart from a new build there is a play that will assist you in doing just that. Simply change to your playbooks directory and execute the ``lxc-containers-destroy.yml`` play.
