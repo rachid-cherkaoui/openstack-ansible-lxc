@@ -12,7 +12,56 @@ The Ansible Playbook Installs:
 * Heat
 * Horizon
 
-![Host Layout](https://raw.githubusercontent.com/stackforge/os-ansible-deployment/master/doc/source/install-guide/figures/environment-overview.png)
+```
+  ====== ASCII Diagram for AIO infrastructure ======
+
+              ------->[ ETH0 == Public Network ]
+              |
+              V                        [  *   ] Socket Connections
+    [ HOST MACHINE ]                   [ <>v^ ] Network Connections
+      *       ^  *
+      |       |  |-----------------------------------------------------
+      |       |                                                       |
+      |       |---------------->[ HAProxy ]                           |
+      |                                 ^                             |
+      |                                 |                             |
+      |                                 V                             |
+      |                          (BR-Interfaces)<-----                |
+      |                                ^     *      |                 |
+      *-[ LXC ]*--*--------------------|-----|------|----|            |
+      |           |                    |     |      |  | |            |
+      |           |                    |     |      |  | |            |
+      |           |                    |     |      |  | |            |
+      |           |                    |     |      V  * |            |
+      |           *                    |     |   [ Galera x3 ]        |
+      |        [ Memcached ]<----------|     |           |            |
+      *-------*[ Rsyslog ]<------------|--|  |           *            |
+      |        [ Repos Server x3 ]<----|  ---|-->[ RabbitMQ x3 ]      |
+      |        [ Horizon ]<------------|  |  |                        |
+      |        [ Nova api ec2 ]<-------|--|  |                        |
+      |        [ Nova api os ]<--------|->|  |                        |
+      |        [ Nova spice console ]<-|  |  |                        |
+      |        [ Nova Cert ]<----------|->|  |                        |
+      |        [ Cinder api ]<---------|->|  |                        |
+      |        [ Glance api ]<---------|->|  |                        |
+      |        [ Heat apis ]<----------|->|  | [ Loop back devices ]*-*
+      |        [ Heat engine ]<--------|->|  |    \        \          |
+      | ------>[ Nova api metadata ]   |  |  |    { LVM }  { XFS x3 } |
+      | |      [ Nova conductor ]<-----|  |  |       *         *      |
+      | |----->[ Nova scheduler ]------|->|  |       |         |      |
+      | |      [ Keystone x3 ]<--------|->|  |       |         |      |
+      | | |--->[ Neutron agents ]*-----|--|---------------------------*
+      | | |    [ Neutron server ]<-----|->|          |         |      |
+      | | | |->[ Swift proxy ]<---------  |          |         |      |
+      *-|-|-|-*[ Cinder volume ]*--------------------*         |      |
+      | | | |                             |                    |      |
+      | | | ---------------------------------------            |      |
+      | | --------------------------------------- |            |      |
+      | |          -----------------------|     | |            |      |
+      | |          |                            | |            |      |
+      | |          V                            | |            *      |
+      ---->[ Compute ]*[ Neutron linuxbridge ]<-| |->[ Swift storage ]-
+```
 
 Make sure you have at least 12GB of Memory to install
  
