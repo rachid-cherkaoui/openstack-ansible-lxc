@@ -63,7 +63,7 @@ The Ansible Playbook Installs:
       ---->[ Compute ]*[ Neutron linuxbridge ]<-| |->[ Swift storage ]-
 ```
 
-Make sure you have at least 12GB of Memory to install
+Make sure you have at least 12GB of Memory to install (It will run on 8GB of Memory however, performance will be impacted)
  
 [Download Ubuntu 14.04.2 Trusty Tahr](http://releases.ubuntu.com/14.04/ubuntu-14.04.2-server-amd64.iso)
 
