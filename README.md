@@ -116,9 +116,17 @@ To access Horizon, open your browser and go to the host machine's IP address.
 * Password: (is generated randomly - you can find it in the openrc file)
 
 ##To use the CLI 
-``
-source openrc
-``
+
+```
+root@osad2:~# source openrc
+```
+```
+root@osad2:~# nova list
++----+------+--------+------------+-------------+----------+
+| ID | Name | Status | Task State | Power State | Networks |
++----+------+--------+------------+-------------+----------+
++----+------+--------+------------+-------------+----------+
+```
 
 ### Rebuilding the Stack
 
