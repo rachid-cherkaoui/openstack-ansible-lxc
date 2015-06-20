@@ -115,6 +115,10 @@ To access Horizon, open your browser and go to the host machine's IP address.
 * Username: admin
 * Password: (is generated randomly - you can find it in the openrc file)
 
+```
+root@osad2:~# nano openrc
+```
+
 ##To use the CLI 
 
 ```
