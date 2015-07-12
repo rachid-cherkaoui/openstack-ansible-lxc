@@ -109,6 +109,17 @@ git checkout master
 ```
 RUN_TEMPEST=no ./scripts/run-aio-build.sh
 ```
+
+Or you can run the the setup-everything.yml playbook
+
+```
+cd playbooks
+```
+
+```
+openstack-ansible setup-everything.yml
+```
+
 Deployment takes around 60 minutes to complete or 120 minutes if Tempest is enabled. 
 
 To access Horizon, open your browser and go to the host machine's IP address. 
