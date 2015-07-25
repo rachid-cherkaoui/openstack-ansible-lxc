@@ -4,7 +4,7 @@ An easy deployment of OpenStack (Kilo) on LXC using Ansible based on (https://gi
 The Ansible Playbook Installs:
 
 * Keystone
-* *Ceilometer
+* Ceilometer
 * Swift
 * Glance
 * Cinder
